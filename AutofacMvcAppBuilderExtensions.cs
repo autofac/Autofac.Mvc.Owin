@@ -26,21 +26,19 @@
 using System;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
-using System.Net;
 using System.Security;
 using System.Web;
-using Autofac.Core.Lifetime;
+using Autofac;
 using Autofac.Integration.Owin;
-using Owin;
 
-namespace Autofac.Integration.Mvc.Owin
+namespace Owin
 {
     /// <summary>
     /// Extension methods for configuring the OWIN pipeline.
     /// </summary>
     [SecuritySafeCritical]
     [EditorBrowsable(EditorBrowsableState.Never)]
-    public static class OwinExtensions
+    public static class AutofacMvcAppBuilderExtensions
     {
         internal static Func<HttpContextBase> CurrentHttpContext = () => new HttpContextWrapper(HttpContext.Current);
 
