@@ -26,7 +26,6 @@
 using System;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
-using System.Security;
 using System.Web;
 using Autofac;
 using Autofac.Integration.Owin;
@@ -36,7 +35,6 @@ namespace Owin
     /// <summary>
     /// Extension methods for configuring the OWIN pipeline.
     /// </summary>
-    [SecuritySafeCritical]
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class AutofacMvcAppBuilderExtensions
     {
@@ -47,7 +45,6 @@ namespace Owin
         /// </summary>
         /// <param name="app">The application builder.</param>
         /// <returns>The application builder.</returns>
-        [SecuritySafeCritical]
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public static IAppBuilder UseAutofacMvc(this IAppBuilder app)
         {

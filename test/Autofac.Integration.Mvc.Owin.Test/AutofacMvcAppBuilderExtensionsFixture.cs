@@ -1,16 +1,15 @@
 ﻿using System.Web;
 using Microsoft.Owin.Testing;
 using Moq;
-using NUnit.Framework;
 using Owin;
+using Xunit;
 using OwinExtensions = Owin.AutofacMvcAppBuilderExtensions;
 
-namespace Autofac.Tests.Integration.Mvc.Owin
+namespace Autofac.Integration.Mvc.Owin.Test
 {
-    [TestFixture]
     public class AutofacMvcAppBuilderExtensionsFixture
     {
-        [Test]
+        [Fact]
         public void UseAutofacMvcUpdatesHttpContextWithLifetimeScopeFromOwinContext()
         {
             var builder = new ContainerBuilder();

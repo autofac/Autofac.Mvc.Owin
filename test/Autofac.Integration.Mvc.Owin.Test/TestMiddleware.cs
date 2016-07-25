@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Autofac.Integration.Owin;
 using Microsoft.Owin;
 
-namespace Autofac.Tests.Integration.Mvc.Owin
+namespace Autofac.Integration.Mvc.Owin.Test
 {
     public class TestMiddleware : OwinMiddleware
     {
