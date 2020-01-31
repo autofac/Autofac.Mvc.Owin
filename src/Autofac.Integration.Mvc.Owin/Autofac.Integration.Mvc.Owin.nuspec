@@ -15,7 +15,7 @@
     <releaseNotes>Release notes are at https://github.com/autofac/Autofac.Mvc.Owin/releases</releaseNotes>
     <dependencies>
       <dependency id="Autofac" version="[5.0.0,6.0.0)" />
-      <dependency id="Autofac.Owin" version="[5.0.0,6.0.0)" />
+      <dependency id="Autofac.Owin" version="[5.0.1,6.0.0)" />
     </dependencies>
   </metadata>
 </package>
