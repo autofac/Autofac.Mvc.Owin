@@ -1,4 +1,6 @@
-﻿using System.Security;
+﻿// Copyright (c) Autofac Project. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
 using System.Threading.Tasks;
 using Autofac.Integration.Owin;
 using Microsoft.Owin;
@@ -13,9 +15,8 @@ namespace Autofac.Integration.Mvc.Owin.Test
             LifetimeScope = null;
         }
 
-        public static ILifetimeScope LifetimeScope { get; set; }
+        public static ILifetimeScope LifetimeScope { get; private set; }
 
-        [SecurityCritical]
         public override Task Invoke(IOwinContext context)
         {
             LifetimeScope = context.GetAutofacLifetimeScope();
