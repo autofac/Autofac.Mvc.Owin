@@ -17,10 +17,9 @@ namespace Owin
     public static class AutofacMvcAppBuilderExtensions
     {
         /// <summary>
-        /// A factory method to allow for mocking in unit tests.
+        /// Gets or sets a factory method for creating <see cref="HttpContextBase"/> instances.
         /// </summary>
-        [SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:FieldsMustBePrivate", Justification = "Required for unit testing")]
-        internal static Func<HttpContextBase> CurrentHttpContext = () => new HttpContextWrapper(HttpContext.Current);
+        internal static Func<HttpContextBase> CurrentHttpContext { get; set; } = () => new HttpContextWrapper(HttpContext.Current);
 
         /// <summary>
         /// Extends the Autofac lifetime scope added from the OWIN pipeline through to the MVC request lifetime scope.
