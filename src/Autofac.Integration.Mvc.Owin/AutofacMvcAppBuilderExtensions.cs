@@ -3,7 +3,6 @@
 
 using System;
 using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
 using System.Web;
 using Autofac;
 using Autofac.Integration.Owin;
@@ -25,8 +24,7 @@ namespace Owin
         /// Extends the Autofac lifetime scope added from the OWIN pipeline through to the MVC request lifetime scope.
         /// </summary>
         /// <param name="app">The application builder.</param>
-        /// <returns>The application builder.</returns>
-        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
+        /// <returns>The application builder for continued configuration.</returns>
         public static IAppBuilder UseAutofacMvc(this IAppBuilder app) =>
             app.Use(async (context, next) =>
             {
