@@ -38,8 +38,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="5.0.0" />
-    <PackageReference Include="Autofac.Owin" Version="5.0.1" />
+    <PackageReference Include="Autofac" Version="[6.0.0, 7.0.0)" />
+    <PackageReference Include="Autofac.Owin" Version="[6.0.0, 7.0.0)" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.0">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
