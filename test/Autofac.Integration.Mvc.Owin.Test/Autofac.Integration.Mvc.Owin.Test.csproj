@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="5.0.0" />
-    <PackageReference Include="Autofac.Owin" Version="5.0.1" />
-    <PackageReference Include="Moq" Version="4.14.5" />
+    <PackageReference Include="Autofac" Version="6.0.0" />
+    <PackageReference Include="Autofac.Owin" Version="6.0.0" />
+    <PackageReference Include="Moq" Version="4.14.6" />
     <PackageReference Include="Microsoft.Owin.Testing" Version="4.1.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.analyzers" Version="0.10.0" />
