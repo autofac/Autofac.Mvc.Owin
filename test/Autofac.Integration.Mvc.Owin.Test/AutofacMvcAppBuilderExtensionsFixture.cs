@@ -1,9 +1,10 @@
 ﻿// Copyright (c) Autofac Project. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using System.Collections;
 using System.Web;
 using Microsoft.Owin.Testing;
-using Moq;
+using NSubstitute;
 using Owin;
 using Xunit;
 using OwinExtensions = Owin.AutofacMvcAppBuilderExtensions;
@@ -19,9 +20,10 @@ public class AutofacMvcAppBuilderExtensionsFixture
         builder.RegisterType<TestMiddleware>();
         var container = builder.Build();
 
-        var httpContext = new Mock<HttpContextBase>();
-        httpContext.SetupSet(mock => mock.Items[typeof(ILifetimeScope)] = It.IsAny<ILifetimeScope>()).Verifiable();
-        OwinExtensions.CurrentHttpContext = () => httpContext.Object;
+        var items = new Hashtable();
+        var httpContext = Substitute.For<HttpContextBase>();
+        httpContext.Items.Returns(items);
+        OwinExtensions.CurrentHttpContext = () => httpContext;
 
         using (var server = TestServer.Create(app =>
         {
@@ -31,7 +33,7 @@ public class AutofacMvcAppBuilderExtensionsFixture
         }))
         {
             await server.HttpClient.GetAsync("/");
-            httpContext.VerifyAll();
+            Assert.IsAssignableFrom<ILifetimeScope>(items[typeof(ILifetimeScope)]);
 
             Assert.NotNull(TestMiddleware.LifetimeScope);
         }
