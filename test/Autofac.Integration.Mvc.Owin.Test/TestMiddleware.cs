@@ -14,7 +14,10 @@ public class TestMiddleware : OwinMiddleware
         LifetimeScope = null;
     }
 
-    public static ILifetimeScope LifetimeScope { get; private set; }
+    public static ILifetimeScope LifetimeScope
+    {
+        get; private set;
+    }
 
     public override Task Invoke(IOwinContext context)
     {

@@ -24,8 +24,8 @@ public static class AutofacMvcAppBuilderExtensions
     /// </summary>
     /// <param name="app">The application builder.</param>
     /// <returns>The application builder for continued configuration.</returns>
-    public static IAppBuilder UseAutofacMvc(this IAppBuilder app) =>
-        app.Use(async (context, next) =>
+    public static IAppBuilder UseAutofacMvc(this IAppBuilder app)
+        => app.Use(async (context, next) =>
         {
             var lifetimeScope = context.GetAutofacLifetimeScope();
             var httpContext = CurrentHttpContext();
