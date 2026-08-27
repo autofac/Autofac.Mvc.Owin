@@ -2,7 +2,7 @@
 
 OWIN support for the ASP.NET MVC integration for [Autofac](https://autofac.org).
 
-[![Build status](https://github.com/autofac/Autofac.Mvc.Owin/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/autofac/Autofac.Mvc.Owin/actions/workflows/ci.yml)
+[![Build status](https://github.com/autofac/Autofac.Mvc.Owin/actions/workflows/main.yml/badge.svg)](https://github.com/autofac/Autofac.Mvc.Owin/actions/workflows/main.yml) [![codecov](https://codecov.io/gh/Autofac/Autofac.Mvc.Owin/branch/develop/graph/badge.svg)](https://codecov.io/gh/Autofac/Autofac.Mvc.Owin) [![NuGet](https://img.shields.io/nuget/v/Autofac.Mvc5.Owin.svg)](https://nuget.org/packages/Autofac.Mvc5.Owin)
 
 Please file issues and pull requests for this package [in this repository](https://github.com/autofac/Autofac.Mvc.Owin/issues) rather than in the Autofac core repo.
 
